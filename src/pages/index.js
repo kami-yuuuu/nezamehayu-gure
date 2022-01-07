@@ -16,7 +16,6 @@ query {
     }
   }
 }
-
 `
 
 const IndexPage = ({ data }) => (

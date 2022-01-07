@@ -33,8 +33,8 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-	<home><h3>Home</h3></home>
-	<about><h3>about</h3></about>
+	<home><Link to="/"><h3>Home</h3></Link></home>
+	<about><Link to="/about"><h3>about</h3></Link></about>
 	<a href="https://github.com/kami-yuuuu" className="github">
 	<IconContext.Provider value={{color:'white', size: '50px'}}><FaGithub /></IconContext.Provider>
 	</a>
