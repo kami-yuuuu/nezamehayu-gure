@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => (
     </div>
 	<home><h3>Home</h3></home>
 	<about><h3>about</h3></about>
-	<a href="https://github.com" className="github">
+	<a href="https://github.com/kami-yuuuu" className="github">
 	<IconContext.Provider value={{color:'white', size: '50px'}}><FaGithub /></IconContext.Provider>
 	</a>
   </header>
@@ -46,7 +46,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `mezamehayu-gure`,
 }
 
 export default Header
