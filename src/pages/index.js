@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link,graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
 export const query = graphql`
 query {
@@ -13,7 +12,7 @@ query {
         title
       }
       id
-      body
+      slug
     }
   }
 }
@@ -27,9 +26,11 @@ const IndexPage = ({ data }) => (
 	    {
 		data.allMdx.nodes.map(node => (
 			<article key={node.id}>
-			<h2>{node.frontmatter.title}</h2>
+			<h2><Link to={`/${node.slug}`}>
+			{node.frontmatter.title}
+			</Link>
+			</h2>
 			<p>{node.frontmatter.date}</p>
-			<MDXRenderer>{node.body}</MDXRenderer>
 			</article>
 		))
 	    }
