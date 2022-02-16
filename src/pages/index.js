@@ -2,6 +2,8 @@ import * as React from "react"
 import { Link,graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
+import "../../node_modules/normalize.css/normalize.css"
 
 export const query = graphql`
 query {
@@ -25,6 +27,7 @@ const IndexPage = ({ data }) => (
 	    {
 		data.allMdx.nodes.map(node => (
 			<article key={node.id}>
+			<StaticImage src="../images/kuranntetyann Small.png"/>
 			<h2><Link to={`/${node.slug}`}>
 			{node.frontmatter.title}
 			</Link>

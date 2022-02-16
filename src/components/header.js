@@ -3,17 +3,11 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import {IconContext} from "react-icons"
 import {FaGithub} from "react-icons/fa"
-import "./header.css"
+import "../sass/header.scss"
+import "../../node_modules/normalize.css/normalize.css"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `black`,
-      marginBottom: `1.45rem`,
-      display:"flex",
-      height:`100px`,
-    }}
-  >
+  <header>
     <div
       style={{
         margin: `0 auto`,
@@ -33,8 +27,8 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-	<home><Link to="/"><h3>Home</h3></Link></home>
-	<about><Link to="/about"><h3>about</h3></Link></about>
+	<home><Link to="/" style={{textDecoration: `none`}}><h3>Home</h3></Link></home>
+	<about><Link to="/about" style={{textDecoration: `none`}}><h3>about</h3></Link></about>
 	<a href="https://github.com/kami-yuuuu" className="github">
 	<IconContext.Provider value={{color:'white', size: '50px'}}><FaGithub /></IconContext.Provider>
 	</a>
