@@ -29,13 +29,16 @@ header{
 	.github{
 		margin:0;
 		padding:1.45rem 1.0875rem;
+		&:hover{
+			animation: purupuru 0.8s linear 0s 1;
+		}
 	}
 	@keyframes purupuru{
 		0%{transform: scale(1.0, 1.0) translate(0%, 0%)}
-		20%{transform: scale(1.0, 1.06) translate(-5%, -4%) skew()}
-		50%{transform: scale() translate() skew()}
-		65%{transform: scale() translate() skew()}
-		80%{transform: scale() translate() skew()}
-		100%{transform:scale() translate() skew()}
+		20%{transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg)}
+		50%{transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg)}
+		65%{transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg)}
+		80%{transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg)}
+		100%{transform:scale(1.0, 1.0) translate(0%, 0%) }
 	}
 }
