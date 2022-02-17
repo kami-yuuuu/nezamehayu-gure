@@ -11,6 +11,9 @@ query ($id: String) {
       date
     }
     body
+    headings {
+      value
+    }
   }
 }
 `
@@ -19,8 +22,18 @@ query ($id: String) {
 const BlogPost = ({ data }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
+	<div>
 	<p>{data.mdx.frontmatter.date}</p>
 	<MDXRenderer>{data.mdx.body}</MDXRenderer>
+	</div>
+	<sidebar>
+	  <ul>{
+		  data.mdx.headings.map( heading =>(
+			  <li>{heading.value}</li>
+		  ))
+	  }
+	  </ul>
+	</sidebar>
     </Layout>
   )
 }
